@@ -12,29 +12,30 @@ Una vez instalado el proyecto, empece con la creacion de las tablas, a maquetar 
 
 ** Pasos para implementar proyecto **
 ### sql para crear base de datos
-
+```
 CREATE DATABASE shop;
-
+```
 Una vez creada la base de datos exitosamente procedemos a ejecutar migraciones con los seeders que no son mas que la insercion de dummy data en la tabla de productos.
-
+```
 php artisan migrate --seed
-
+```
 Se instalan las dependencias de composer
-
+```
 composer install 
-
+```
 Se instalan las dependencia de npm
-
+```
 npm install
-
+```
 Se construyen los scripts de la aplicacion
-
+```
 npm run build
-
+```
 Se lanza el proyecto
 
+```
 php artisan serve
-
+```
 Una vez lanzado el proyecto deberia indiar una url de la siguiente manera http://127.0.0.1:8000, ir a esta url y alli se podra acceder a hacer las pruebas, 
 
 ###### Marcas de ejemplo
