@@ -4,7 +4,7 @@ import { useForm } from '../hooks'
 import { Results } from './Results'
 export const Search = () => {
 
-  const {search, onInputChange} = useForm({search : ''})
+  const {search, onInputChange, onResetForm} = useForm({search : ''})
 
   const [currentState, setState] = useState({
     isLoading : false,
@@ -28,7 +28,7 @@ export const Search = () => {
     }))
     try{
 
-      const {data, status} = await axios.post('/getProduct', {search})
+      const {data, status} = await axios.post('/api/getProduct', {search})
       setState((prevState) => ({
         ...prevState,
         data,
@@ -45,6 +45,7 @@ export const Search = () => {
         ...prevState,
         isLoading:false
       }))
+      onResetForm()
     }
   }
 

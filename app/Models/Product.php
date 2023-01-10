@@ -33,7 +33,8 @@ class Product extends Model
 
     public static function searchById(int $id)
     {
-
+        $model = self::find($id);
+        return $model ? [$model] : [] ;
     }
 
 }
